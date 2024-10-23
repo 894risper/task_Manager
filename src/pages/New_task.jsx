@@ -61,36 +61,40 @@ setInputs({
 
   
   return (
-    <div>
-      <h1>New Task</h1>
-<form onSubmit={handleSubmit} >
-  <label htmlFor="title">Title
-<input
+    <div className='flex justify-center items-center h-screen display  flex-col'>
+      <h1 className=' ' >New Task</h1>
+<form  onSubmit={handleSubmit}  className='display flex flex-col border-2 border-black p-4 h- w-1/4 '>
+  <div></div>
+  <label htmlFor="title" className='mb-4 '>Title
+<input 
  type='text'
  name='title'
  placeholder='title'
  value={inputs.title}
  onChange={handleChange}
+ className='w-full mt-1 px-3 py-2 block border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm '
  />
 {error.title && <p className="text-red-600">{error.title}</p>}
 
 </label>
 
-<label htmlFor="description">Description
+<label htmlFor="description" className='mb-4 '>Description
   <input type="text"
   placeholder='description'
   onChange={handleChange}
   value={inputs.description}
   name='description'
-
+className='w-full mt-1 px-3 py-2 block border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm '
   />
   {error.description && <p className='text-red-500'>{error.description}</p>}
 </label>Deadline
-<label htmlFor="deadline">
+<label htmlFor="deadline" className='mb-4 '>
   <input type="date" 
   name='deadline'
   value={inputs.deadline}
   onChange={handleChange}
+  className='mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm'
+                  
   />
 {error.deadline && <p className='text-red-600'>{error.deadline}</p>}
 </label>
@@ -99,6 +103,7 @@ setInputs({
   <select name="status" id="status"
   value={inputs.status}
   onChange={handleChange}
+  className='w-full mt-1 px-3 py-2 block border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm '
   >
    <option value="pending">Pending</option> 
    <option value="completed">Completed</option>
@@ -111,6 +116,7 @@ setInputs({
 
 
 <button type='submit'>Submit</button>
+
 </form>
 
 

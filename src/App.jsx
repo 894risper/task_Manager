@@ -9,6 +9,7 @@ import { TaskProvider } from './context/TasksContext'
 
 function App() {
   return (
+    <div className='display flex flex-col'>
     <TaskProvider>
       <BrowserRouter>
         <Routes>
@@ -21,6 +22,7 @@ function App() {
         </Routes>
       </BrowserRouter>
     </TaskProvider>
+    </div>
   )
 }
 

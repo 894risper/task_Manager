@@ -3,9 +3,10 @@ import { Link ,Outlet} from 'react-router-dom'
 
 const Layout = () => {
   return (
-    <div>
+
+    <div className=''>
        <nav>
-        <ul>
+        <ul className='display flex flex-row fle space-x-96 bg-blue-400 h-8 justify-center'>
             <li>
                 <Link to="/">View Tasks</Link>
             </li>
