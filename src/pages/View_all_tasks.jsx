@@ -3,15 +3,12 @@ import { TasksContext } from '../context/TasksContext';
 import { FaTrash, FaEdit } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';  
 
-
 const View_all_tasks = () => {
   const { tasks, deleteTask } = useContext(TasksContext);
   const navigate = useNavigate();  
 
-  
-
   return (
-    <div className='flex justify-center mt-4 p-6 border border-gray-300 rounded-lg shadow-md w-full'>
+    <div className='flex flex-col items-center mt-4 p-6 border border-gray-300 rounded-lg shadow-md w-1/2'>
       {tasks.length > 0 ? (
         <table className='table-auto w-full text-left'>
           <thead>
@@ -37,9 +34,9 @@ const View_all_tasks = () => {
                   </button>
                 </td>
                 <td className='px-4'>
-                <button onClick={() => navigate('/edit_task', { state: { index } })}>
-              <FaEdit/>
-            </button>
+                  <button onClick={() => navigate('/edit_task', { state: { index } })}>
+                    <FaEdit/>
+                  </button>
                 </td>
               </tr>
             ))}
@@ -48,9 +45,13 @@ const View_all_tasks = () => {
       ) : (
         <p>No tasks added yet</p>
       )}
-      
+      <button 
+        onClick={() => navigate('/new_task')} 
+        className='mt-4 bg-blue-500 text-white px-4 py-2 rounded-md'
+      >
+        Add New Task
+      </button>
     </div>
-    
   );
 };
 

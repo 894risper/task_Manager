@@ -62,8 +62,8 @@ setInputs({
   
   return (
     <div className='flex justify-center items-center h-screen display  flex-col'>
-      <h1 className=' ' >New Task</h1>
-<form  onSubmit={handleSubmit}  className='display flex flex-col border-2 border-black p-4 h- w-1/4 '>
+      <h1 className='text-center  text-blue-950 ' >NEW TASK</h1>
+<form  onSubmit={handleSubmit}  className='display flex flex-col border border-gray-300 shadow-md  p-4 h- w-96 rounded-lg  '>
   <div></div>
   <label htmlFor="title" className='mb-4 '>Title
 <input 
